@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="150dp"
+    android:layout_marginBottom="10dp"
+    android:backgroundTint="@color/gray"
+    app:cardCornerRadius="14dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_marginHorizontal="21dp"
+            android:orientation="horizontal"
+            android:weightSum="4">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                android:layout_weight="2"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tvProductName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/overlock"
+                    android:textColor="@color/dark_brown"
+                    android:textSize="21sp"
+                    android:textStyle="bold"
+                    tools:text="Logitech Wireless Mouse" />
+
+                <TextView
+                    android:id="@+id/tvProductId"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:fontFamily="@font/overlock"
+                    android:textColor="@color/dark_brown"
+                    android:textSize="18sp"
+                    android:textStyle="italic"
+                    tools:text="#123" />
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tvProductQty"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAlignment="center"
+                android:layout_weight="0.5"
+                android:layout_marginHorizontal="10dp"
+                android:fontFamily="@font/overlock"
+                android:textColor="@color/dark_brown"
+                android:textSize="18sp"
+                tools:text="Qty: 2" />
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.5"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tvProductSinglePrice"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:fontFamily="@font/overlock"
+                    android:textAlignment="textEnd"
+                    android:textColor="@color/dark_brown"
+                    android:textSize="18sp"
+                    tools:text="5,000 MMK" />
+
+                <TextView
+                    android:id="@+id/tvProductSubtotalPrice"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="5dp"
+                    android:fontFamily="@font/overlock"
+                    android:textAlignment="textEnd"
+                    android:textColor="@color/dark_brown"
+                    android:textSize="18sp"
+                    tools:text="10,000 MMK" />
+
+                <TextView
+                    android:id="@+id/tvDiscountPercentGained"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="5dp"
+                    android:fontFamily="@font/overlock"
+                    android:textAlignment="textEnd"
+                    android:textColor="@color/dark_brown"
+                    android:textSize="18sp"
+                    tools:text="-5%" />
+
+                <TextView
+                    android:id="@+id/tvProductFinalSubtotalPrice"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="5dp"
+                    android:fontFamily="@font/overlock"
+                    android:textAlignment="textEnd"
+                    android:textColor="@color/dark_brown"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    tools:text="9,750 MMK" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+</com.google.android.material.card.MaterialCardView>

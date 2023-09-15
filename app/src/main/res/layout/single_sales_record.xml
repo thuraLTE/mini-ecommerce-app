@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/salesRecordContainer"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@android:color/transparent"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/tvSalesRecordId"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:fontFamily="@font/overlock"
+        android:textColor="@color/dark_brown"
+        android:textSize="24sp"
+        android:textStyle="italic"
+        tools:text="#012345XYZ" />
+
+    <TextView
+        android:id="@+id/tvApprovedBy"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:fontFamily="@font/overlock"
+        android:textColor="@color/dark_brown"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        tools:text="Approved By: Mark" />
+
+    <TextView
+        android:id="@+id/tvProductTypeQty"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:fontFamily="@font/overlock"
+        android:textColor="@color/dark_brown"
+        android:textSize="24sp"
+        tools:text="5 Products" />
+
+    <TextView
+        android:id="@+id/tvTotalPrice"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:fontFamily="@font/overlock"
+        android:textColor="@color/dark_brown"
+        android:textSize="24sp"
+        tools:text="60,000 MMK" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="10dp"
+        android:background="@color/dark_brown" />
+
+</LinearLayout>

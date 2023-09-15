@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/vecteezy_primary_bg"
+    tools:context=".ui.admin.AdminSalesRecordListActivity">
+
+    <LinearLayout
+        android:id="@+id/linearScreenMessage"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/ivBack"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginHorizontal="14dp"
+            android:layout_marginTop="14dp"
+            android:src="@drawable/ic_back_arrow"
+            app:tint="@color/dark_brown" />
+
+        <TextView
+            android:id="@+id/tvStaffCartScreenMessage"
+            android:layout_marginTop="30dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="14dp"
+            android:fontFamily="@font/lemonada"
+            android:text="Latest Sales Actions,"
+            android:textColor="@color/dark_brown"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="14dp"
+            android:layout_marginTop="10dp"
+            android:fontFamily="@font/maven_pro_medium"
+            android:text="@string/admin_sales_record_list_screnn_message"
+            android:textColor="@color/dark_brown"
+            android:textSize="30sp"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tvEmptySalesRecordList"
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:layout_below="@id/linearScreenMessage"
+        android:fontFamily="@font/overlock"
+        android:text="@string/no_sales_records_yet"
+        android:textAlignment="center"
+        android:textColor="@color/dark_brown"
+        android:textSize="24sp"
+        android:textStyle="bold" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvSalesRecordList"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/linearScreenMessage"
+        android:layout_marginHorizontal="14dp"
+        android:layout_marginTop="14dp"
+        tools:listitem="@layout/single_sales_record"
+        android:clipToPadding="false" />
+
+</RelativeLayout>

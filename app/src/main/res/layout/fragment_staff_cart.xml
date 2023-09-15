@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@drawable/vecteezy_primary_bg"
+    android:padding="14dp"
+    tools:context=".ui.staff.StaffCartFragment">
+
+    <TextView
+        android:id="@+id/tvEmptyCartList"
+        android:visibility="invisible"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:fontFamily="@font/overlock"
+        android:text="@string/staff_cart_screen_empty_message"
+        android:textAlignment="center"
+        android:textColor="@color/dark_brown"
+        android:textSize="24sp"
+        android:textStyle="bold" />
+
+    <ImageView
+        android:id="@+id/ivLogout"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_alignParentEnd="true"
+        android:layout_gravity="end"
+        android:src="@drawable/ic_logout"
+        app:tint="@color/dark_brown" />
+
+    <LinearLayout
+        android:id="@+id/linearCartSummary"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/linearCartItems"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:clipToPadding="false"
+            android:layout_marginTop="40dp"
+            android:layout_marginBottom="10dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tvStaffCartScreenMessage"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/lemonada"
+                android:textColor="@color/dark_brown"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:text="@string/in_your_cart" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvCartList"
+                android:layout_width="match_parent"
+                android:layout_height="360dp"
+                android:layout_marginTop="10dp"
+                tools:listitem="@layout/single_cart_item"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/linearCalculation"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:orientation="vertical">
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/dark_brown" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:weightSum="3.5"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="2"
+                    android:text="@string/subtotal_price"
+                    android:textColor="@color/dark_brown"
+                    android:textSize="21sp"
+                    android:textAlignment="textEnd"
+                    android:fontFamily="@font/overlock"/>
+
+                <TextView
+                    android:id="@+id/tvSalesRecordSubTotalPrice"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.5"
+                    tools:text="12,000 MMK"
+                    android:textAlignment="textEnd"
+                    android:textColor="@color/dark_brown"
+                    android:textSize="21sp"
+                    android:fontFamily="@font/overlock"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:weightSum="3.5"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="2"
+                    android:text="@string/discount"
+                    android:textColor="@color/dark_brown"
+                    android:textSize="21sp"
+                    android:textAlignment="textEnd"
+                    android:fontFamily="@font/overlock"/>
+
+                <TextView
+                    android:id="@+id/tvSalesRecordDiscountPrice"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.5"
+                    tools:text="- 1,000 MMK"
+                    android:textAlignment="textEnd"
+                    android:textColor="@color/dark_brown"
+                    android:textSize="21sp"
+                    android:fontFamily="@font/overlock"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:weightSum="3.5"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="2"
+                    android:text="@string/tax"
+                    android:textColor="@color/dark_brown"
+                    android:textSize="21sp"
+                    android:textAlignment="textEnd"
+                    android:fontFamily="@font/overlock"/>
+
+                <TextView
+                    android:id="@+id/tvSalesRecordTaxPrice"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.5"
+                    tools:text="300 MMK"
+                    android:textAlignment="textEnd"
+                    android:textColor="@color/dark_brown"
+                    android:textSize="21sp"
+                    android:fontFamily="@font/overlock"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:weightSum="3.5"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="2"
+                    android:text="@string/total_price"
+                    android:textColor="@color/dark_brown"
+                    android:textSize="23sp"
+                    android:textAlignment="textEnd"
+                    android:textStyle="bold"
+                    android:fontFamily="@font/overlock"/>
+
+                <TextView
+                    android:id="@+id/tvSalesRecordTotalPrice"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.5"
+                    tools:text="11,300 MMK"
+                    android:textAlignment="textEnd"
+                    android:textColor="@color/dark_brown"
+                    android:textSize="23sp"
+                    android:textStyle="bold"
+                    android:fontFamily="@font/overlock"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnAddToSalesRecord"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/add_to_sales_record_btn"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/primary_btn_bg"
+        android:textColor="@color/light_brown"/>
+
+</RelativeLayout>

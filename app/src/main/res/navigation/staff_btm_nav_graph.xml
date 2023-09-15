@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/staff_btm_nav_graph"
+    app:startDestination="@id/staffProductListFragment">
+
+    <fragment
+        android:id="@+id/staffProductListFragment"
+        android:name="com.example.hw_8.ui.staff.StaffProductListFragment"
+        android:label="fragment_staff_product_list"
+        tools:layout="@layout/fragment_staff_product_list" >
+        <action
+            android:id="@+id/action_staffProductListFragment_to_staffSettingFragment"
+            app:destination="@id/staffSettingFragment" />
+        <action
+            android:id="@+id/action_staffProductListFragment_to_staffAddProductFragment"
+            app:destination="@id/staffAddProductFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/staffSettingFragment"
+        android:name="com.example.hw_8.ui.staff.StaffSettingFragment"
+        android:label="fragment_staff_setting"
+        tools:layout="@layout/fragment_staff_setting" />
+    <fragment
+        android:id="@+id/staffAddProductFragment"
+        android:name="com.example.hw_8.ui.staff.StaffAddProductFragment"
+        android:label="fragment_add_product"
+        tools:layout="@layout/fragment_staff_add_product" >
+        <action
+            android:id="@+id/action_staffAddProductFragment_to_staffProductListFragment"
+            app:destination="@id/staffProductListFragment" />
+    </fragment>
+</navigation>

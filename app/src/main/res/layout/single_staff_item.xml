@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@android:color/transparent"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tvStaffId"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            tools:text="#012345XYZ"
+            android:textColor="@color/dark_brown"
+            android:fontFamily="@font/overlock"
+            android:layout_marginTop="8dp"
+            android:textSize="24sp"
+            android:textStyle="italic"/>
+
+        <TextView
+            android:id="@+id/tvStaffName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            tools:text="Mark"
+            android:textColor="@color/dark_brown"
+            android:fontFamily="@font/overlock"
+            android:textSize="24sp"
+            android:textStyle="bold"/>
+
+        <TextView
+            android:id="@+id/tvStaffEmail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            tools:text="mark@gmail.com"
+            android:textColor="@color/dark_brown"
+            android:fontFamily="@font/overlock"
+            android:textSize="24sp" />
+
+        <TextView
+            android:id="@+id/tvStaffNrc"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            tools:text="1/OKM(N)123456"
+            android:textColor="@color/dark_brown"
+            android:fontFamily="@font/overlock"
+            android:textSize="24sp" />
+
+        <TextView
+            android:id="@+id/tvStaffGender"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            tools:text="Male"
+            android:textColor="@color/dark_brown"
+            android:fontFamily="@font/overlock"
+            android:textSize="24sp" />
+
+        <TextView
+            android:id="@+id/tvStaffPassword"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            tools:text="12345"
+            android:textColor="@color/dark_brown"
+            android:fontFamily="@font/overlock"
+            android:textSize="24sp" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="10dp"
+            android:background="@color/dark_brown"/>
+
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/ivRemoveStaff"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="10dp"
+        android:src="@drawable/ic_remove_staff"
+        android:layout_alignParentEnd="true"
+        app:tint="@color/dark_brown" />
+
+</RelativeLayout>
